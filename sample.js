@@ -1,4 +1,7 @@
-
+let check1 = document.querySelector("#check1");
+let check2 = document.querySelector("#check2");
+let check3 = document.querySelector("#check3");
+let check4 = document.querySelector("#check4");
 function countLetters() {
   const text = document.getElementById("inputTextArea").value;
   let lowercaseCount = 0;
@@ -35,7 +38,32 @@ function countLetters() {
   specialCountElement.textContent = specialCount;
   const spaceCountEl = document.getElementById("spacecount");
   spaceCountEl.textContent = spacecount ;
-  
+  if(text.length >= 8){
+    check1.style.color = 'green';
+    
+  }
+  else{
+    check1.style.color ='red'
+  }
+  if(/[A-Z]/.test(text)){
+    check2.style.color = 'green';
+  }
+  else{
+    check2.style.color ='red'  
+  }
+  const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+if(specialCharRegex.test(text)){
+  check3.style.color = 'green';
+}  
+else{
+  check3.style.color = 'red';
+}
+if(/[0-9]/.test(text)){
+  check4.style.color = 'green';
+}
+else{
+  check4.style.color ='red'  
+}
 }
 var textArea = document.getElementById("inputTextArea");
 textArea.addEventListener("input", countLetters);
