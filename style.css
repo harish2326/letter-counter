@@ -20,13 +20,37 @@ textarea{
 }
 p{
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 2rem;
     
 
 }
-div{
+.container{
     text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
-
-
+.checker{
+    color: red;
+    font-size: .6rem;
+    padding-left: 30px;
+    background-color: black;
+    border-radius: 3rem;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    
+}
+.counter{
+    margin-top: 20px;
+    background-color: black;
+    color: red;
+    padding: 20px;
+    border-radius: 3rem;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    
+}
 
